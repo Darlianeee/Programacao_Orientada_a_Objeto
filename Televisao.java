@@ -23,13 +23,19 @@ public class Televisao {
         canais.add("Band");
         canais.add("DYSNEY");
     }
-     public void ligar(){
-        ligada = true;
-        System.out.println("A TV está ligada!!");
-     }
-    public void desligar(){
-        ligada = false;
-        System.out.println("A TV está desligada!!");
-    
+    public boolean isligada(){
+        return this.ligada;
     }
+    public void LigadaDesligada(){
+        this.ligada =!this.ligada;
+        if (isligada()){
+            System.out.println("A TV está ligada!!");
+        }else{
+            System.out.println("A TV está desligada!!");
+        }
+    }
+    public void mensagemTVDesligada(){
+        System.out.println("A TV está desligada, ligue-a primeiro.");
+    }
+     
 }
